@@ -54,6 +54,30 @@ Devices can be retrieved if you know one of three id's related to the device:
    var device = getNode(gUid);
 ```
 
+##### Device Properties
+
+These properties are common to all devices:
+
+- `device.level` - This is the level of the device. Anything higher than 0 generally represents 'ON'
+- `device.name` - This is the name of the device
+- `device.deviceId` - This is the unique UUID assigned to a device
+- `device.providerDeviceId` - This is the controller assigned id of a device. For z-wave, this is the node id.
+- `device.shortId` - This is the short id of a device. Assigned by InControl.
+ 
+##### Thermostat Device Properties
+
+- `thermostatDevice.thermostatFanMode` - The desired operating mode of the fan
+- `thermostatDevice.thermostatFanState` - The current state of the fan 
+- `thermostatDevice.thermostatSystemMode` - The desired operating mode of the system (Heating, cooling, off, etc.)
+- `thermostatDevice.thermostatSystemState` - The current state of the system
+- `thermostatDevice.thermostatSetPoints` - This is a list of setpoints and their values
+
+To retrieve a thermostat device with all its properties, you could issue this command:
+
+```
+   var thermostatDevice = getNodeByShortId(thermostatShortId) as Thermostat;
+```
+
 #### Standard Device Commands
 
 ##### Set Device Level
