@@ -112,8 +112,18 @@ These are the valid modes -- note that some thermostats may not support all of t
         EnergySaveCool
         Away
 
+##### Setpoints
 
+To change a setpoint, you need to know the name of the manufacture created setpoints. Generally these are always the same and you 
+usually use these values:
 
+- To change heating, use a name of "Heating1"
+- To change cooling, use a name of "Cooling1"
+
+```
+   var device = getNodeByShortId(10);
+   dm.setZWaveThermostatSetPoint(device.deviceId, "Heating1", 72);
+```
 
 #### Other Commands
 
