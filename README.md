@@ -58,11 +58,15 @@ Devices can be retrieved if you know one of three id's related to the device:
 
 ##### Showing Messages
 
+This command will show a message in the UI if it's running. If the UI is not running, the command is ignored.
+
 ```
    showMessage("Your message here", "The title of your message");
 ```
 
-#### Writting to the Logfile.txt
+#### Writing to the Logfile.txt
+
+The logfile.txt can be found in your InControl's installation folder.
 
 ```
    writeFileLog("Message to append to the logfile");
