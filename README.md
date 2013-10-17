@@ -28,3 +28,7 @@ public class MyScript : ScriptBase, ScriptInterface {
    
 }
 ```
+
+### Commands
+
+## Retrieving a Device
