@@ -54,21 +54,16 @@ Devices can be retrieved if you know one of three id's related to the device:
    var device = getNode(gUid);
 ```
 
-##### Using a Short Id
+#### Other Commands
 
-Assuming your short id is 10, you could retrieve the device using this command:
+##### Showing Messages
 
+```
+   showMessage("Your message here", "The title of your message");
+```
 
+#### Writting to the Logfile.txt
 
-##### Using a Object Provider Id:
-
-
-##### Using a Device Id
-
-
-
-
-
-
-
-
+```
+   writeFileLog("Message to append to the logfile");
+```
