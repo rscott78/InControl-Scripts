@@ -54,6 +54,67 @@ Devices can be retrieved if you know one of three id's related to the device:
    var device = getNode(gUid);
 ```
 
+#### Standard Device Commands
+
+##### Set Device Level
+
+To set the level of a device to 75, you would first need to retrieve the device then use it's device Id to issue the command. 
+
+```
+   var device = getNodeByShortId(10);
+   dm.setLevel(device.deviceId, 75);
+```
+
+##### Set Device Power
+
+To power a device on or off, you would first need to retrieve the device then use it's device id to issue the command.
+
+```
+   var device = getNodeByShortId(10);
+   dm.setPower(device.deviceId, true);
+```
+
+#### Thermostat Control
+
+##### Fan Mode
+
+```
+   var device = getNodeByShortId(10);
+   
+   // Turns the fan to auto
+   dm.setZWaveThermostatFanMode(device.deviceId, HA.DeviceController.Common.ThermoFanMode.Auto);
+   
+   // Turns the fan to on
+   dm.setZWaveThermostatFanMode(device.deviceId, HA.DeviceController.Common.ThermoFanMode.On);
+```
+
+##### System Mode
+
+```
+   var device = getNodeByShortId(10);
+   dm.setZWaveThermostatSystemState(device.deviceId, HA.DeviceController.Common.ThermoSystemMode.Heat);
+```
+
+These are the valid modes -- note that some thermostats may not support all of these modes:
+
+        Off
+        Heat
+        Cool 
+        Auto
+        AuxEmergency 
+        Resume
+        Fan
+        Furnace
+        DryAir
+        MoistAir
+        AutoChange
+        EnergySaveHeat
+        EnergySaveCool
+        Away
+
+
+
+
 #### Other Commands
 
 ##### Showing Messages
