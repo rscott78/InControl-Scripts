@@ -17,9 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using MLS.HA.DeviceController.Common.Device.ZWave;
-
 
 public class MyScript : ScriptBase, ScriptInterface {
 
@@ -27,5 +25,6 @@ public class MyScript : ScriptBase, ScriptInterface {
        // This is where the magic happens
        // Your code should go here
    }
+   
 }
 ```
