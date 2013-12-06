@@ -149,6 +149,32 @@ usually use these values:
    dm.setZWaveThermostatSetPoint(device.deviceId, "Heating1", 72);
 ```
 
+#### Properties
+
+base.sceneDevices - This is a list of all devices available in the scene
+
+```
+foreach (var sd in base.sceneDevices) {
+   var device = getNode((Guid)sd.deviceId);
+   ...
+}
+```
+
+base.targetNodes - This is a list of all nodes if using rules (you should really be using scenes though!)
+
+```
+// Get all the devices specified in the above list
+var devices = getNodes(targetNodes);
+
+// Loop through all the nodes 
+foreach (var d in devices) {
+    if (d.stateTracker.timeSinceLastChange.TotalMinutes > 10) {
+        // Turn off the device by setting the level to 0
+        setDeviceLevel(d.deviceId, 0);
+    }
+}
+```
+
 #### Other Commands
 
 ##### Showing Messages
