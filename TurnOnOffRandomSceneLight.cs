@@ -32,8 +32,8 @@ public class TurnOnOffRandomSceneLight : ScriptBase, ScriptInterface {
 
 
         } catch (Exception ex) {
-            // Log the exception here
-            var message = ex.Message;
+            // Log the exception here            
+            writeFileLog("TurnOnOffRandomSceneLight Error", ex);
         }
     }
 }
