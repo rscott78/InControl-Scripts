@@ -23,10 +23,10 @@ public class TurnOnOffRandomSceneLight : ScriptBase, ScriptInterface {
                 // Check the light level
                 if (light.level > 0) {
                     // Light is on, so turn it off
-                    setDeviceLevel(light.deviceId, 0);
+                    dm.setPower(light.deviceId, false);
                 } else {
-                    // Light is off, so turn it on to 50%
-                    setDeviceLevel(light.deviceId, 50);
+                    // Light is off, so turn it on
+                    dm.setPower(light.deviceId, true);
                 }
             }
 
