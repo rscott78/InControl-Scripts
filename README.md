@@ -86,16 +86,18 @@ To set the level of a device to 75, you would first need to retrieve the device 
 
 ```
    var device = getNodeByShortId(10);
-   dm.setLevel(device.deviceId, 75);
+   setDeviceLevel(device.deviceId, 75);
 ```
 
 ##### Set Device Power
+
+Available as of version 3.114.
 
 To power a device on or off, you would first need to retrieve the device then use it's device id to issue the command.
 
 ```
    var device = getNodeByShortId(10);
-   dm.setPower(device.deviceId, true);
+   setPower(device.deviceId, true);
 ```
 
 #### Thermostat Control
