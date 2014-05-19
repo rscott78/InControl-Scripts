@@ -65,7 +65,7 @@ These properties are common to all devices:
 - `device.shortId` - This is the short id of a device. Assigned by InControl.
 - `device.deviceType` - This tells what type of device it is. 
 
-Valid device Types:
+Valid device types:
 - StandardSwitch
 - DimmerSwitch
 - PowerOutlet
