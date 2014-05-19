@@ -64,24 +64,28 @@ These properties are common to all devices:
 - `device.providerDeviceId` - This is the controller assigned id of a device. For z-wave, this is the node id.
 - `device.shortId` - This is the short id of a device. Assigned by InControl.
 - 'device.deviceType' - This tells what type of device it is. 
--- Valid device Types:
--- StandardSwitch
--- DimmerSwitch
--- PowerOutlet,
-        Thermostat,
-        Controller,
-        Unknown,
-        BinarySensor,
-        ZonePlayer,
-        MotionSensor,
-        MultiLevelSensor,
-        EntryControl,
-        LevelDisplayer,
-        NotLicensed,
-        IpCamera,
-        EnergyMonitor,
-        Alarm,
-        Fan
+
+Valid device Types:
+- StandardSwitch
+- DimmerSwitch
+- PowerOutlet
+- Thermostat
+- Controller
+- Unknown
+- BinarySensor
+- ZonePlayer
+- MotionSensor
+- MultiLevelSensor
+- EntryControl
+- LevelDisplayer
+- NotLicensed
+- IpCamera
+- EnergyMonitor
+- Alarm
+- Fan
+
+```if (device.deviceType == MLS.HA.DeviceController.Common.StandardSwitch) { ... }```
+
  
 ##### Thermostat Device Properties
 
