@@ -63,7 +63,7 @@ These properties are common to all devices:
 - `device.deviceId` - This is the unique UUID assigned to a device
 - `device.providerDeviceId` - This is the controller assigned id of a device. For z-wave, this is the node id.
 - `device.shortId` - This is the short id of a device. Assigned by InControl.
-- 'device.deviceType' - This tells what type of device it is. 
+- `device.deviceType` - This tells what type of device it is. 
 
 Valid device Types:
 - StandardSwitch
@@ -84,7 +84,12 @@ Valid device Types:
 - Alarm
 - Fan
 
-```if (device.deviceType == MLS.HA.DeviceController.Common.StandardSwitch) { ... }```
+```
+   var device = getNodeByShortId(10);
+   if (device.deviceType == MLS.HA.DeviceController.Common.StandardSwitch) { 
+      ...
+   }
+```
 
  
 ##### Thermostat Device Properties
