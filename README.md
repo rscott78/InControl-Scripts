@@ -222,3 +222,14 @@ The logfile.txt can be found in your InControl's installation folder.
 ```
    writeFileLog("Message to append to the logfile");
 ```
+
+#### 
+
+##### Device triggers
+
+As of version 3.145, a script that is triggered as part of a scene will have access to the device that caused the trigger via the triggerMetaData property. The ```triggerMetaData.triggeringDevice``` will contain a reference to the device that triggered the scene/script.
+
+```
+   var deviceName = triggerMetaData.triggeringDevice.deviceName;
+```
+
