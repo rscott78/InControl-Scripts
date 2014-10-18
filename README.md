@@ -233,3 +233,7 @@ As of version 3.145, a script that is triggered as part of a scene will have acc
    var deviceName = triggerMetaData.triggeringDevice.deviceName;
 ```
 
+###### Scene Name
+
+The scene name that called this script can be accessed using the ```sceneName``` property.
+
