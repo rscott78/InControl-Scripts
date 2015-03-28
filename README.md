@@ -205,6 +205,25 @@ foreach (var d in devices) {
 }
 ```
 
+#### Set configuration Parameters
+
+This command allows you to set configuration values for a device. 
+Requires version 4.0
+
+```
+// Retrieve a device
+var device = getNodeByShortId(42);
+
+// Setup configuration parameter values
+// TIP: Use http://www.pepper1.net/zwavedb/ to determine number, size and value
+byte paramNumber = 37;
+int size = 2;
+int paramValue = 257;
+
+// Set the value
+dm.setConfigurationParameter(device.deviceId, paramNumber, size, paramValue);
+```
+
 #### Other Commands
 
 ##### Showing Messages
