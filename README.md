@@ -128,6 +128,57 @@ To power a device on or off, you would first need to retrieve the device then us
    setPower(device.deviceId, true);
 ```
 
+#### Entry Control (Locks, etc.)
+
+##### Set User Code
+
+```
+    dm.setDoorCode(device.deviceId, 10, "9467");
+```
+
+##### Delete User Code
+
+```
+    dm.deleteDoorCode(device.deviceId, 10);
+```
+
+Here's a working example of a script that deletes and sets a user code.
+
+```
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using MLS.ZWave.Service.Rules;
+using MLS.ZWave.BusinessObjects;
+
+/// <summary>
+/// This script will set a user code on your door lock
+///
+/// ALWAYS MAKE COPIES OF SCRIPTS YOU INTEND TO CUSTOMIZE OR YOUR CHANGES 
+/// COULD BE LOST.
+/// </summary>
+public class ChangeLockCode : ScriptBase, ScriptInterface {
+    public void runScript() {
+        try {
+
+            // Get the lock device
+            var device = getNodeByShortId(42);
+
+	         // Clear the code for #10 first as some locks require this
+            dm.deleteDoorCode(device.deviceId, 10);
+
+            // Set the user code for user #10 to 9467
+            dm.setDoorCode(device.deviceId, 10, "9467");
+
+        } catch (Exception ex) {
+            // Log the exception here
+            var message = ex.Message;
+        }
+    }
+}
+```
+
 #### Thermostat Control
 
 ##### Fan Mode
